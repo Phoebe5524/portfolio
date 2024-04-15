@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars caused by video */
+}
+
+header { /* Background color of the header */
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 2.1vw;
+    padding-bottom: 2.1vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    pointer-events: auto;
+}
+
+.icon {
+    width: 38%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+}
+nav ul li {
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    margin:20px;
+    color: black; /* Text color of navigation links */
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/*.about nav ul li a {*/
+/*    margin:20px;*/
+/*    color: white; !* Text color of navigation links *!*/
+/*    font-size: 18px;*/
+/*    font-family: "Poppins", sans-serif;*/
+/*    font-weight: 100;*/
+/*    font-style: normal;*/
+/*    text-decoration: none; !* Remove underline from links *!*/
+/*}*/
+
+nav ul li a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    height: 824px;
+    width: 1512px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px 50px 100px
+}
+
+.intro-text {
+    margin: 200px
+}
