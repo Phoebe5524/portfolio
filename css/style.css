@@ -3,9 +3,10 @@
 }
 
 body, html {
+    padding: 0;
     height: 100%;
     margin: 0;
-    overflow: hidden; /* Prevents scrollbars caused by video */
+    overflow: auto; /* Prevents scrollbars caused by video */
 }
 
 #background-video {
@@ -16,7 +17,7 @@ body, html {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1; /* Places the video behind other content */
+    z-index: -1;
 }
 
 /*.skip {*/
@@ -67,7 +68,7 @@ nav ul li a {
     color: white; /* Text color of navigation links */
     font-size: 18px;
     font-family: "Poppins", sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-style: normal;
     text-decoration: none; /* Remove underline from links */
 }
@@ -81,6 +82,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;  /* Ensures that the container takes at least the height of the viewport */
+    position: relative;
+    overflow: visible; 
 }
 
 .overview {
@@ -112,8 +116,88 @@ main {
     font-size: 47px;
     font-style: normal;
     color: white;
+    line-height: 1.2;
 }
 
 .overview span {
     text-decoration: white;
 }
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Spacing between projects */
+    width: 100%; /* Full width of the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+    padding: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 300px;
+    font-size: 30px;
+}
+.project-thumbnail img {
+    width: 100%; /* Fixed width for all images */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the set dimension */
+    margin-right: 20px; /* Space between the image and the info text */
+}
+
+.project-info {
+    flex: 1;
+    position: absolute; /* Overlay info on the thumbnail */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    color: #333;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.project:hover .project-info {
+    opacity: 1; /* Fully visible when hovering */
+    color: gray;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: #333; /* Dark grey color for the text */
+
+}
+
+.project-info p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-thumbnail img {
+        margin-bottom: 10px; /* Space between the image and text when stacked */
+    }
+}
+
+
