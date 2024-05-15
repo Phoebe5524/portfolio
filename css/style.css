@@ -13,8 +13,8 @@ body, html {
     position: fixed; /* Fixed position to cover the entire viewport */
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     width: auto;
     height: auto;
     z-index: -1;
@@ -46,7 +46,10 @@ nav ul {
     list-style: none;
     display: flex;
     padding-top: 15px;
+    position: absolute;
+    top: 50%;
 }
+
 nav ul li {
     justify-content: center;
     align-items: center;
@@ -127,31 +130,37 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 20px;
-    background-color: white;
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    width: 80%;
 }
 
 .project {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Spacing between projects */
-    width: 100%; /* Full width of the container */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
-    padding: 10px;
+    margin-bottom: 35px; /* Spacing between projects */
+    width: 100%;
     transition: all 0.3s ease;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
 }
 
 .project-thumbnail {
     width: 100%;
     height: 300px;
     font-size: 30px;
+    border-radius: 20px;
 }
 .project-thumbnail img {
-    width: 100%; /* Fixed width for all images */
+    width: 100%;
     height: 300px; /* Fixed height for all images */
     object-fit: cover; /* Ensures the image covers the set dimension */
+    border-radius: 20px;
     margin-right: 20px; /* Space between the image and the info text */
 }
 
@@ -163,24 +172,30 @@ main {
     right: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     color: #333;
-    opacity: 0; /* Initially invisible */
+    opacity: 0;
     transition: opacity 0.3s ease; /* Smooth transition for opacity */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .project:hover .project-info {
-    opacity: 1; /* Fully visible when hovering */
+    opacity: 1;
     color: gray;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .project-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
     margin-top: 0;
-    color: #333; /* Dark grey color for the text */
+    color: #333;
 
 }
 

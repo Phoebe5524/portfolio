@@ -16,24 +16,55 @@
     <title>Document</title>
 </head>
 <body>
+    <background>
+        <video autoplay muted loop id="background-video">
+            <source src="videos/file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </background>
+    <header>
+        <div class="icon">
+            <a href="index.html">
+                <img src="images/icon.png" width = "50" alt="icon">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="projects.html">-> Projects.</a></li>
+                <li><a href="about.html">-> About.</a></li>
+                <li><a href="PDFs/CV-5.13.pdf" target="_blank">-> Resume.</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="projects-container">
-        <div class="project">
+        <div class="project First">
             <div class="project-thumbnail">
-                <!-- <img src="path_to_thumbnail1.jpg" alt="Project 1 Thumbnail"> -->
+                <img src="images/project1(1).png" alt="Project 1 Thumbnail">
             </div>
             <div class="project-info">
-                <h3>Project Title 1</h3>
-                <p>A short description of Project 1. This project focuses on implementing UI/UX best practices to enhance user interaction.</p>
+                <h3>PixelRequest</h3>
+                <!-- <p>A short description of Project 1. This project focuses on implementing UI/UX best practices to enhance user interaction.</p> -->
             </div>
         </div>
-        <div class="project">
+        <div class="project Second">
             <div class="project-thumbnail">
-                <!-- <img src="path_to_thumbnail2.jpg" alt="Project 2 Thumbnail"> -->
+                <img src="images/project2(1).png" alt="Project 2 Thumbnail">
             </div>
             <div class="project-info">
-                <h3>Project Title 2</h3>
-                <p>A short description of Project 2. This project involves data analysis and visualization to provide insights into user behavior.</p>
+                <h3>FitReserve</h3>
+                <!-- <p>A short description of Project 2. This project involves data analysis and visualization to provide insights into user behavior.</p> -->
             </div>
         </div>
+        <div class="project Third">
+            <div class="project-thumbnail">
+                <img src="images/project3(1).png" alt="Project 3 Thumbnail">
+            </div>
+            <div class="project-info">
+                <h3>Yingyao's Portfolio</h3>
+                <!-- <p>A short description of Project 3. This project involves data analysis and visualization to provide insights into user behavior.</p> -->
+            </div>
+        </div>
+    <script src="js/project.js"></script>
 </body>
 </html>
